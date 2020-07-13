@@ -1,5 +1,6 @@
 local frequency = 0.5
 local bonus_prob = 0.2
+local coin_prob = 0.2
 local min_y = 60
 local max_y = 600
 
@@ -19,9 +20,12 @@ function update(self, dt)
 		local p = go.get_position()
 		p.y = vmath.lerp(math.random(), min_y, max_y)
 
-		local component = "#star_factory"
-		if math.random() < bonus_prob then
+		local component = "#star_factory"		
+		local valor = math.random()
+		if valor <= bonus_prob then
 			component = "#bonus_factory"
+		elseif valor > bonus_prob and valor < coin_prob then
+			component = "#coin_factory"
 		end
 		factory.create(component, p)
 	end

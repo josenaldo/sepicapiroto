@@ -1,21 +1,6 @@
 components {
-  id: "star_script"
-  component: "/stars/star.script"
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-}
-components {
-  id: "pickup"
-  component: "/stars/pickup.particlefx"
+  id: "coin_script"
+  component: "/coin/coin.script"
   position {
     x: 0.0
     y: 0.0
@@ -29,7 +14,27 @@ components {
   }
 }
 embedded_components {
-  id: "collisionobject"
+  id: "sprite_coin"
+  type: "sprite"
+  data: "tile_set: \"/coin/coin.atlas\"\n"
+  "default_animation: \"sprite_one\"\n"
+  "material: \"/builtins/materials/sprite.material\"\n"
+  "blend_mode: BLEND_MODE_ALPHA\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+}
+embedded_components {
+  id: "collisionobjectcoin"
   type: "collisionobject"
   data: "collision_shape: \"\"\n"
   "type: COLLISION_OBJECT_TYPE_KINEMATIC\n"
@@ -55,7 +60,7 @@ embedded_components {
   "    index: 0\n"
   "    count: 1\n"
   "  }\n"
-  "  data: 21.0\n"
+  "  data: 28.0\n"
   "}\n"
   "linear_damping: 0.0\n"
   "angular_damping: 0.0\n"
@@ -65,26 +70,6 @@ embedded_components {
     x: 0.0
     y: 0.0
     z: 0.0
-  }
-  rotation {
-    x: 0.0
-    y: 0.0
-    z: 0.0
-    w: 1.0
-  }
-}
-embedded_components {
-  id: "sprite"
-  type: "sprite"
-  data: "tile_set: \"/stars/stars.atlas\"\n"
-  "default_animation: \"star\"\n"
-  "material: \"/builtins/materials/sprite.material\"\n"
-  "blend_mode: BLEND_MODE_ALPHA\n"
-  ""
-  position {
-    x: 0.0
-    y: 0.0
-    z: 0.5
   }
   rotation {
     x: 0.0
