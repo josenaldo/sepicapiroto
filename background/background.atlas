@@ -1,17 +1,26 @@
 images {
-  image: "/background/bg.png"
+  image: "/background/fase1/layer-1.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
   image: "/background/earthlike_planet.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
   image: "/background/gas_planet.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
   image: "/background/ice_planet.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 images {
   image: "/background/ring_planet.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+images {
+  image: "/background/fase1/lua.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
 }
 margin: 0
 extrude_borders: 1

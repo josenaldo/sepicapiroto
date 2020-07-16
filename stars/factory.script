@@ -1,6 +1,6 @@
 local frequency = 0.5
-local bonus_prob = 0.2
-local coin_prob = 0.2
+local bonus_prob = 0
+local coin_prob = 1
 local min_y = 60
 local max_y = 600
 
