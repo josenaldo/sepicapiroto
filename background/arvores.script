@@ -1,5 +1,4 @@
-go.property ("speed", -5)
-go.property ("delay", 1280)
+go.property ("speed", -30)
 
 function init(self)
 	-- Add initialization code here
@@ -18,11 +17,15 @@ function update(self, dt)
 	
 	-- apply the speed
 	p.x = p.x + self.speed * dt
-	
+
 	-- reset clouds to far right when they reach the far left to create infinite scrolling
-	if p.x <= -90 then
-		p.x = 1280 + self.delay
+	if p.x <= -1280  then
+
+		local correcao = p.x + 1280
+		
+		p.x = 1280 + correcao
 	end
+	
 	go.set_position(p)
 end
 
